@@ -41,7 +41,7 @@ public class addUser {
 //      pathResetBtn = new ClassPathResource("../src/test/resources/testimages/resetbtn.png").getPath();
 //      pathUserError = new ClassPathResource("../src/test/resources/testimages/usererror.png").getPath();
 //
-//
+//D:\Data\VWissink\Documents\Framework Tries\BaselineProjectSikuliX\BaselineProject\src\test\resources\testimages
        pathSearch = new ClassPathResource("src/test/resources/testimages/search.png").getPath();
        pathNewTab = new ClassPathResource("src/test/resources/testimages/nieuw_tabblad.png").getPath();
        pathUser = new ClassPathResource("src/test/resources/testimages/user.png").getPath();
@@ -50,7 +50,7 @@ public class addUser {
        pathRemoveBtn = new ClassPathResource("src/test/resources/testimages/removebtn.png").getPath();
        pathCrossBtn = new ClassPathResource("src/test/resources/testimages/crossbtn.png").getPath();
        pathEditBtn = new ClassPathResource("src/test/resources/testimages/editbtn.png").getPath();
-       pathResetBtn = new ClassPathResource("src/test/resources/testimages/resetbtn.png").getFilename();
+       pathResetBtn = new ClassPathResource("src/test/resources/testimages/resetbtn.png").getPath();
        pathUserError = new ClassPathResource("src/test/resources/testimages/usererror.png").getPath();
 
 
@@ -72,7 +72,7 @@ public class addUser {
     @AfterAll
     public static void teardownTestClass() throws FindFailed {
         RUNAPP = new Pattern(pathCrossBtn);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
     }
 
@@ -82,7 +82,8 @@ public class addUser {
         //clear DB
 
         //refresh page
-     //   screen.type(Key.F5);
+        screen.wait(1.0);
+        screen.type(Key.F5);
         screen.wait(1.0);
     }
 
@@ -94,7 +95,7 @@ public class addUser {
         //wait till the windows start menu is visible
         RUNAPP = new Pattern(pathSearch);
         try {
-            screen.wait(RUNAPP.similar((float) 0.90), 2);
+            screen.wait(RUNAPP.similar((float) 0.80), 2);
             //type chrome and press enter to start chrome
             screen.type("chrome" );
             screen.type(Key.ENTER);
@@ -102,7 +103,7 @@ public class addUser {
 
             //wait till chrome is open
             RUNAPP = new Pattern(pathNewTab);
-            screen.wait(RUNAPP.similar((float) 0.90), 10);
+            screen.wait(RUNAPP.similar((float) 0.80), 10);
 
         } catch (FindFailed findFailed) {
 
@@ -120,7 +121,7 @@ public class addUser {
        screen.type(Key.ENTER);
        RUNAPP = new Pattern(pathUser);
         try {
-            screen.wait(RUNAPP.similar((float) 0.90), 10);
+            screen.wait(RUNAPP.similar((float) 0.80), 10);
         } catch (FindFailed findFailed) {
 
             findFailed.printStackTrace();
@@ -136,16 +137,16 @@ public class addUser {
 
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
         screen.type("Thomas" + Key.TAB + "32" + Key.TAB + "2323" + Key.ENTER);
 
         RUNAPP = new Pattern(pathUserSuccess);
-        screen.wait(RUNAPP.similar((float) 0.90), 10);
+        screen.wait(RUNAPP.similar((float) 0.80), 10);
 
 
         RUNAPP = new Pattern(pathRemoveBtn);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
     }
 
@@ -155,21 +156,20 @@ public class addUser {
 
 
         RUNAPP = new Pattern(pathUser);
-        screen.wait(RUNAPP.similar((float) 0.90), 10);
+        screen.wait(RUNAPP.similar((float) 0.80), 10);
 
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
         screen.type("Thomas" + Key.TAB + "32" + Key.TAB + "2323");
 
         RUNAPP = new Pattern(pathResetBtn);
-        screen.click(RUNAPP.similar((float) 0.90), 10);
+        screen.click(RUNAPP.similar((float) 0.80), 10);
 
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.wait(RUNAPP.similar((float) 0.90), 3);
-
+        screen.wait(RUNAPP.similar((float) 0.80), 3);
     }
 
     @Test
@@ -177,20 +177,20 @@ public class addUser {
 
 
         RUNAPP = new Pattern(pathUser);
-        screen.wait(RUNAPP.similar((float) 0.90), 10);
+        screen.wait(RUNAPP.similar((float) 0.80), 10);
 
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
         screen.type("Prince-Fritz-Cruene-August-Willem-Jan-Hendrik-Dick" + Key.TAB + "32" + Key.TAB + "2323");
 
         RUNAPP = new Pattern(pathResetBtn);
-        screen.click(RUNAPP.similar((float) 0.90), 10);
+        screen.click(RUNAPP.similar((float) 0.80), 10);
 
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.wait(RUNAPP.similar((float) 0.90), 3);
+        screen.wait(RUNAPP.similar((float) 0.80), 3);
 
     }
 
@@ -199,44 +199,44 @@ public class addUser {
 
 
         RUNAPP = new Pattern(pathUser);
-        screen.wait(RUNAPP.similar((float) 0.90), 10);
+        screen.wait(RUNAPP.similar((float) 0.80), 10);
 
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
         screen.type("An" + Key.TAB + "32" + Key.TAB + "2323");
 
         RUNAPP = new Pattern(pathResetBtn);
-        screen.click(RUNAPP.similar((float) 0.90), 10);
+        screen.click(RUNAPP.similar((float) 0.80), 10);
 
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.wait(RUNAPP.similar((float) 0.90), 3);
+        screen.wait(RUNAPP.similar((float) 0.80), 3);
 
     }
 
     @Test
     public void addUserAndAddDuplicate() throws FindFailed {
         RUNAPP = new Pattern(pathEnterName);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
         screen.type("Thomas" + Key.TAB + "32" + Key.TAB + "2323" + Key.ENTER);
 
         RUNAPP = new Pattern(pathUserSuccess);
-        screen.wait(RUNAPP.similar((float) 0.90), 10);
+        screen.wait(RUNAPP.similar((float) 0.80), 10);
 
         RUNAPP = new Pattern(pathEnterName);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
         screen.type("Thomas" + Key.TAB + "32" + Key.TAB + "2323" + Key.ENTER);
 
         //check if error is shown
         RUNAPP = new Pattern(pathUserError);
-        screen.wait(RUNAPP.similar((float) 0.90), 10);
+        screen.wait(RUNAPP.similar((float) 0.80), 10);
 
         RUNAPP = new Pattern(pathRemoveBtn);
-        screen.click(RUNAPP.similar((float) 0.90));
+        screen.click(RUNAPP.similar((float) 0.80));
 
     }
 
@@ -244,7 +244,7 @@ public class addUser {
     @Test
     public void addUserInvalidFind() throws FindFailed {
         RUNAPP = new Pattern(pathUserError);
-        screen.click(RUNAPP.similar((float) 1));
+        screen.click(RUNAPP.similar((float) 0.80));
     }
 
 

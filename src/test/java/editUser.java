@@ -35,6 +35,7 @@ public class editUser {
 
 
             //load variables
+            //                                  D:/Data/VWissink/Documents/Framework Tries/BaselineProjectSikuliX/BaselineProject/src/test/resources/testimages/
             pathSearch = new ClassPathResource("D:/Data/VWissink/Documents/Framework Tries/BaselineProjectSikuliX/BaselineProject/src/test/resources/testimages/search.png").getPath();
             pathNewTab = new ClassPathResource("D:/Data/VWissink/Documents/Framework Tries/BaselineProjectSikuliX/BaselineProject/src/test/resources/testimages/nieuw_tabblad.png").getPath();
             pathUser = new ClassPathResource("D:/Data/VWissink/Documents/Framework Tries/BaselineProjectSikuliX/BaselineProject/src/test/resources/testimages/user.png").getPath();
